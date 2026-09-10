@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   DESIGN SYSTEM TOKENS
+   Sideout Café – dark charcoal + warm green accent
+───────────────────────────────────────────────────────────────────────────── */
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Brand palette */
+    --color-so-bg:       #0A0D0B;
+    --color-so-surface:  #111613;
+    --color-so-surface2: #171D19;
+    --color-so-accent:   #9AF06A;
+    --color-so-accent2:  #D9F7C0;
+    --color-so-text:     #F5F7F2;
+    --color-so-muted:    #9CA69D;
+
+    /* Animations */
+    --animate-fade-up:    fade-up 0.6s ease-out both;
+    --animate-fade-in:    fade-in 0.5s ease-out both;
+    --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   KEYFRAMES
+───────────────────────────────────────────────────────────────────────────── */
+@keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.3; }
+    50%       { opacity: 0.7; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   GLOBAL RESETS
+───────────────────────────────────────────────────────────────────────────── */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0A0D0B;
+}
+::-webkit-scrollbar-thumb {
+    background: #2a3a2d;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #9AF06A;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HERO GLOW ORB (non-interactive decorative element)
+───────────────────────────────────────────────────────────────────────────── */
+.glow-orb {
+    pointer-events: none;
+    position: absolute;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(154, 240, 106, 0.18) 0%, transparent 70%);
+    animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   GLASS CARD EFFECT
+───────────────────────────────────────────────────────────────────────────── */
+.glass-card {
+    background: rgba(23, 29, 25, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   GRADIENT TEXT UTILITY
+───────────────────────────────────────────────────────────────────────────── */
+.gradient-text {
+    background: linear-gradient(135deg, #9AF06A 0%, #D9F7C0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ACCENT BORDER GRADIENT
+───────────────────────────────────────────────────────────────────────────── */
+.accent-border {
+    border: 1px solid rgba(154, 240, 106, 0.3);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   MOBILE MENU TRANSITION
+───────────────────────────────────────────────────────────────────────────── */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
