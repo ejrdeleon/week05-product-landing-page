@@ -1,22 +1,22 @@
-# MP04 – Responsive Product Landing Page · Sideout Café
+# MP04 – Responsive Product Landing Page · Sideout Cafe
 
 **Course:** ITST 302 – Client-Server Technologies
 **Week:** 5
 **Module:** Module 1 – Frontend Development with Laravel
 **Project:** MP04 – Responsive Product Landing Page
-**Business:** Sideout Café · Lumban, Laguna, Philippines
+**Business:** Sideout Cafe · Lumban, Laguna, Philippines
 
 ---
 
 ## Academic Disclaimer
 
-> **This is a student academic redesign project for ITST 302. It is not the official Sideout Café website.**
+> **This is a student academic redesign project for ITST 302. It is not the official Sideout Cafe website.**
 >
-> All pricing shown in the Pricing section is **sample content for academic prototype purposes only** — it does not represent official Sideout Café menu prices.
+> All pricing shown in the Pricing section is **sample content for academic prototype purposes only** — it does not represent official Sideout Cafe menu prices.
 >
 > All testimonials are **fictional sample content** — they are not real customer reviews.
 >
-> Information verified from the official Sideout Café website has been used where available. Any additional content is clearly labeled as academic/sample material.
+> Information verified from the official Sideout Cafe website has been used where available. Any additional content is clearly labeled as academic/sample material.
 
 ---
 
@@ -27,6 +27,7 @@
 A **product landing page** is a standalone web page designed to promote a specific product, service, or business. Unlike a full website, a landing page has one primary goal: to convert visitors into customers, members, or leads through a clear call to action (CTA).
 
 Landing pages typically include:
+
 - A compelling hero section with a strong headline
 - Feature highlights explaining the value proposition
 - Pricing or package options
@@ -45,14 +46,15 @@ In modern web development, landing pages are one of the most important marketing
 ### Purpose of This Project
 
 This project demonstrates the practical application of:
+
 - Laravel Blade Components for modular UI development
 - Tailwind CSS for utility-first responsive styling
 - Vite for modern asset bundling
 - Responsive design principles for a real-world business
 
-### Sideout Café as the Business Context
+### Sideout Cafe as the Business Context
 
-**Sideout Café** is a real local café located in Lumban, Laguna, Philippines (4014). Their official website at [sideout-cafe.com](https://www.sideout-cafe.com/) features a loyalty program where customers earn one point for every personal drink purchased.
+**Sideout Cafe** is a real local cafe located in Lumban, Laguna, Philippines (4014). Their official website at [sideout-cafe.com](https://www.sideout-cafe.com/) features a loyalty program where customers earn one point for every personal drink purchased.
 
 This academic redesign uses verified information from the official website and clearly labels any content created for the prototype.
 
@@ -62,18 +64,18 @@ This academic redesign uses verified information from the official website and c
 
 By completing this project, the following learning objectives were accomplished:
 
-| Objective | Applied In |
-|-----------|------------|
-| ✅ Build responsive layouts with Tailwind CSS | All sections |
-| ✅ Create and reuse Laravel Blade Components | 11 components across the project |
-| ✅ Apply mobile-first responsive design | All breakpoints from 375px |
-| ✅ Implement modular component architecture | `resources/views/components/` |
-| ✅ Use CSS Grid and Flexbox | Features, Pricing, Footer, Hero grids |
-| ✅ Apply Tailwind utility classes and breakpoints | Throughout all components |
-| ✅ Demonstrate UI/UX design principles | Dark design system, visual hierarchy |
-| ✅ Structure a Laravel application with layouts | `layouts/app.blade.php` |
-| ✅ Use Git for version control | Meaningful commits throughout |
-| ✅ Prepare a GitHub-ready public repository | `.gitignore`, README, structure |
+| Objective                                         | Applied In                            |
+| ------------------------------------------------- | ------------------------------------- |
+| ✅ Build responsive layouts with Tailwind CSS     | All sections                          |
+| ✅ Create and reuse Laravel Blade Components      | 11 components across the project      |
+| ✅ Apply mobile-first responsive design           | All breakpoints from 375px            |
+| ✅ Implement modular component architecture       | `resources/views/components/`         |
+| ✅ Use CSS Grid and Flexbox                       | Features, Pricing, Footer, Hero grids |
+| ✅ Apply Tailwind utility classes and breakpoints | Throughout all components             |
+| ✅ Demonstrate UI/UX design principles            | Dark design system, visual hierarchy  |
+| ✅ Structure a Laravel application with layouts   | `layouts/app.blade.php`               |
+| ✅ Use Git for version control                    | Meaningful commits throughout         |
+| ✅ Prepare a GitHub-ready public repository       | `.gitignore`, README, structure       |
 
 ---
 
@@ -87,45 +89,43 @@ In Tailwind CSS, this means writing default (mobile) styles first, then adding r
 
 ```html
 <!-- Mobile: 1 column, Tablet: 2 columns, Desktop: 3 columns -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-    ...
-</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">...</div>
 ```
 
 ### Responsive Breakpoints
 
-| Prefix | Min-width | Use Case |
-|--------|-----------|----------|
-| *(none)* | 0px | Mobile base styles |
-| `sm:` | 640px | Large mobile / small tablet |
-| `md:` | 768px | Tablet |
-| `lg:` | 1024px | Laptop |
-| `xl:` | 1280px | Desktop |
-| `2xl:` | 1536px | Wide desktop |
+| Prefix   | Min-width | Use Case                    |
+| -------- | --------- | --------------------------- |
+| _(none)_ | 0px       | Mobile base styles          |
+| `sm:`    | 640px     | Large mobile / small tablet |
+| `md:`    | 768px     | Tablet                      |
+| `lg:`    | 1024px    | Laptop                      |
+| `xl:`    | 1280px    | Desktop                     |
+| `2xl:`   | 1536px    | Wide desktop                |
 
 ### Tested Viewports
 
-| Device | Viewport |
-|--------|----------|
-| iPhone SE | 375 × 667px |
-| iPhone 14 | 390 × 844px |
-| Android (general) | 414 × 896px |
-| iPad | 768 × 1024px |
-| iPad Air | 820 × 1180px |
-| Laptop | 1366 × 768px |
-| Desktop | 1440 × 900px |
-| Wide Desktop | 1920 × 1080px |
+| Device            | Viewport      |
+| ----------------- | ------------- |
+| iPhone SE         | 375 × 667px   |
+| iPhone 14         | 390 × 844px   |
+| Android (general) | 414 × 896px   |
+| iPad              | 768 × 1024px  |
+| iPad Air          | 820 × 1180px  |
+| Laptop            | 1366 × 768px  |
+| Desktop           | 1440 × 900px  |
+| Wide Desktop      | 1920 × 1080px |
 
 ### Flexbox and CSS Grid Examples
 
 **Flexbox** – used for navigation, button groups, and inline layouts:
+
 ```html
-<div class="flex items-center justify-between gap-4">
-    ...
-</div>
+<div class="flex items-center justify-between gap-4">...</div>
 ```
 
 **CSS Grid** – used for feature cards, pricing, testimonials, and footer:
+
 ```html
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
     ...
@@ -134,7 +134,8 @@ In Tailwind CSS, this means writing default (mobile) styles first, then adding r
 
 ### Why Responsiveness Matters
 
-A non-responsive site loses a significant portion of its audience. In the Philippines, mobile internet access is dominant — a café's landing page must work perfectly on a smartphone. This project ensures:
+A non-responsive site loses a significant portion of its audience. In the Philippines, mobile internet access is dominant — a cafe's landing page must work perfectly on a smartphone. This project ensures:
+
 - No horizontal scrolling at any breakpoint
 - Touch-friendly button sizing (minimum 44×44px)
 - Readable font sizes on small screens
@@ -159,26 +160,37 @@ Tailwind CSS is a **utility-first CSS framework** that provides low-level utilit
 ### Utility Class Examples from This Project
 
 **Spacing and sizing:**
+
 ```html
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28"></div>
 ```
 
 **Typography:**
+
 ```html
-<h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+<h1
+    class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
+></h1>
 ```
 
 **Shadows and rounded corners:**
+
 ```html
-<div class="rounded-3xl shadow-2xl shadow-black/40 border border-white/[0.06]">
+<div
+    class="rounded-3xl shadow-2xl shadow-black/40 border border-white/[0.06]"
+></div>
 ```
 
 **Hover effects and transitions:**
+
 ```html
-<div class="hover:-translate-y-1 hover:shadow-xl hover:border-so-accent/30 transition-all duration-300">
+<div
+    class="hover:-translate-y-1 hover:shadow-xl hover:border-so-accent/30 transition-all duration-300"
+></div>
 ```
 
 **Tailwind v4 Configuration** (`tailwind.config.js`):
+
 ```js
 theme: {
     extend: {
@@ -204,11 +216,13 @@ theme: {
 ### Why Reusable Components Matter
 
 In traditional development, copying HTML for repeated elements leads to:
+
 - Inconsistent styles across the page
 - Difficult maintenance (change one → change everywhere)
 - Longer, harder-to-read template files
 
 With Blade Components:
+
 - **DRY Principle** — write once, reuse many times
 - **Single source of truth** — update one component, all instances update
 - **Readable page templates** — `home.blade.php` reads like a list of sections
@@ -216,6 +230,7 @@ With Blade Components:
 ### Component Example: `<x-feature-card>`
 
 **Component file** (`resources/views/components/feature-card.blade.php`):
+
 ```blade
 @props([
     'icon'        => '',
@@ -235,6 +250,7 @@ With Blade Components:
 ```
 
 **Usage in `home.blade.php`:**
+
 ```blade
 <x-feature-card
     title="Loyalty Rewards"
@@ -268,18 +284,18 @@ With Blade Components:
 
 ### Color Palette
 
-| Role | Token | Hex |
-|------|-------|-----|
-| Background | `bg-so-bg` | `#0A0D0B` |
-| Surface | `bg-so-surface` | `#111613` |
-| Surface 2 | `bg-so-surface2` | `#171D19` |
-| Primary Accent | `text-so-accent` | `#9AF06A` |
-| Secondary Accent | `text-so-accent2` | `#D9F7C0` |
-| Text | `text-so-text` | `#F5F7F2` |
-| Muted | `text-so-muted` | `#9CA69D` |
-| Borders | — | `rgba(255,255,255,0.06–0.14)` |
+| Role             | Token             | Hex                           |
+| ---------------- | ----------------- | ----------------------------- |
+| Background       | `bg-so-bg`        | `#0A0D0B`                     |
+| Surface          | `bg-so-surface`   | `#111613`                     |
+| Surface 2        | `bg-so-surface2`  | `#171D19`                     |
+| Primary Accent   | `text-so-accent`  | `#9AF06A`                     |
+| Secondary Accent | `text-so-accent2` | `#D9F7C0`                     |
+| Text             | `text-so-text`    | `#F5F7F2`                     |
+| Muted            | `text-so-muted`   | `#9CA69D`                     |
+| Borders          | —                 | `rgba(255,255,255,0.06–0.14)` |
 
-The dark charcoal base (`#0A0D0B`) with warm green accent (`#9AF06A`) was chosen to feel premium and modern while aligning with Sideout Café's brand identity visible on the official website.
+The dark charcoal base (`#0A0D0B`) with warm green accent (`#9AF06A`) was chosen to feel premium and modern while aligning with Sideout Cafe's brand identity visible on the official website.
 
 ### Typography
 
@@ -297,16 +313,17 @@ Coffee cup · Gift/reward · Map pin · Smartphone · House · Users · Star · 
 
 ### Button Styles
 
-| Variant | Description |
-|---------|-------------|
-| `primary` | Green background, dark text, glow shadow, hover lift |
-| `secondary` | Dark surface, subtle border |
-| `ghost` | Transparent, muted text, subtle hover |
-| `outline` | Green border, fills green on hover |
+| Variant     | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| `primary`   | Green background, dark text, glow shadow, hover lift |
+| `secondary` | Dark surface, subtle border                          |
+| `ghost`     | Transparent, muted text, subtle hover                |
+| `outline`   | Green border, fills green on hover                   |
 
 ### Card Design
 
 All cards follow these principles:
+
 - `rounded-2xl` or `rounded-3xl` (large, modern corners)
 - `border border-white/[0.06]` (very subtle dark-mode border)
 - `hover:border-so-accent/30` (accent border on hover)
@@ -316,6 +333,7 @@ All cards follow these principles:
 ### Spacing
 
 Uses Tailwind's default spacing scale:
+
 - Section padding: `py-20 lg:py-28`
 - Card padding: `p-6` to `p-8`
 - Container: `px-4 sm:px-6 lg:px-8` with `max-w-7xl`
@@ -381,22 +399,22 @@ week05-product-landing-page/
 
 ## 8. Screenshots
 
-| # | Screenshot | Description |
-|---|------------|-------------|
-| 01 | `01-before-design.png` | Initial student prototype (basic layout) |
-| 02 | `02-after-design.png` | Final polished interface |
-| 03 | `03-desktop-layout.png` | Full desktop view at 1440px |
-| 04 | `04-tablet-layout.png` | Tablet view at 768px |
-| 05 | `05-mobile-layout.png` | Mobile view at 390px |
-| 06 | `06-navigation-bar.png` | Navbar component (desktop + mobile) |
-| 07 | `07-hero-section.png` | Hero section with loyalty card mockup |
-| 08 | `08-features-section.png` | All 8 feature cards |
-| 09 | `09-pricing-cards.png` | 3 pricing cards with disclaimer |
-| 10 | `10-testimonials.png` | 3 testimonial cards with disclaimer |
-| 11 | `11-footer.png` | 4-column footer |
-| 12 | `12-vscode-project-structure.png` | VS Code Explorer showing full structure |
-| 13 | `13-blade-components-folder.png` | All 11 component files in VS Code |
-| 14 | `14-github-repository.png` | GitHub repository page |
+| #   | Screenshot                        | Description                              |
+| --- | --------------------------------- | ---------------------------------------- |
+| 01  | `01-before-design.png`            | Initial student prototype (basic layout) |
+| 02  | `02-after-design.png`             | Final polished interface                 |
+| 03  | `03-desktop-layout.png`           | Full desktop view at 1440px              |
+| 04  | `04-tablet-layout.png`            | Tablet view at 768px                     |
+| 05  | `05-mobile-layout.png`            | Mobile view at 390px                     |
+| 06  | `06-navigation-bar.png`           | Navbar component (desktop + mobile)      |
+| 07  | `07-hero-section.png`             | Hero section with loyalty card mockup    |
+| 08  | `08-features-section.png`         | All 8 feature cards                      |
+| 09  | `09-pricing-cards.png`            | 3 pricing cards with disclaimer          |
+| 10  | `10-testimonials.png`             | 3 testimonial cards with disclaimer      |
+| 11  | `11-footer.png`                   | 4-column footer                          |
+| 12  | `12-vscode-project-structure.png` | VS Code Explorer showing full structure  |
+| 13  | `13-blade-components-folder.png`  | All 11 component files in VS Code        |
+| 14  | `14-github-repository.png`        | GitHub repository page                   |
 
 See `screenshots/README.md` for viewport instructions.
 
@@ -404,19 +422,19 @@ See `screenshots/README.md` for viewport instructions.
 
 ## 9. Technologies Used
 
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| **Laravel** | 12.x | PHP framework, routing, Blade templating |
-| **PHP** | 8.2+ | Server-side language |
-| **Blade** | Built-in | Laravel templating engine, component system |
-| **Tailwind CSS** | v4.3.x | Utility-first CSS framework |
-| **Vite** | v8.x | Modern asset bundler (CSS + JS) |
-| **@tailwindcss/vite** | v4.3.x | Tailwind v4 Vite plugin |
-| **Instrument Sans** | via Bunny | Modern sans-serif font (via Vite fonts) |
-| **HTML5** | — | Semantic markup structure |
-| **Vanilla JavaScript** | — | Mobile menu toggle (no external libraries) |
-| **Git** | — | Version control |
-| **GitHub** | — | Remote repository hosting |
+| Technology             | Version   | Purpose                                     |
+| ---------------------- | --------- | ------------------------------------------- |
+| **Laravel**            | 12.x      | PHP framework, routing, Blade templating    |
+| **PHP**                | 8.2+      | Server-side language                        |
+| **Blade**              | Built-in  | Laravel templating engine, component system |
+| **Tailwind CSS**       | v4.3.x    | Utility-first CSS framework                 |
+| **Vite**               | v8.x      | Modern asset bundler (CSS + JS)             |
+| **@tailwindcss/vite**  | v4.3.x    | Tailwind v4 Vite plugin                     |
+| **Instrument Sans**    | via Bunny | Modern sans-serif font (via Vite fonts)     |
+| **HTML5**              | —         | Semantic markup structure                   |
+| **Vanilla JavaScript** | —         | Mobile menu toggle (no external libraries)  |
+| **Git**                | —         | Version control                             |
+| **GitHub**             | —         | Remote repository hosting                   |
 
 ---
 
@@ -466,16 +484,19 @@ npm run dev
 Open two terminal windows:
 
 **Terminal 1 – Vite dev server (hot reload):**
+
 ```bash
 npm run dev
 ```
 
 **Terminal 2 – Laravel server:**
+
 ```bash
 php artisan serve
 ```
 
 Then open your browser and visit:
+
 ```
 http://localhost:8000
 ```
@@ -493,24 +514,26 @@ php artisan serve
 
 Use Chrome DevTools to test at these viewports:
 
-| Preset | Width | Height |
-|--------|-------|--------|
-| Mobile S | 375px | 667px |
-| Mobile M | 390px | 844px |
-| Mobile L | 414px | 896px |
-| Tablet | 768px | 1024px |
-| Tablet L | 820px | 1180px |
-| Laptop | 1366px | 768px |
-| Desktop | 1440px | 900px |
+| Preset     | Width  | Height |
+| ---------- | ------ | ------ |
+| Mobile S   | 375px  | 667px  |
+| Mobile M   | 390px  | 844px  |
+| Mobile L   | 414px  | 896px  |
+| Tablet     | 768px  | 1024px |
+| Tablet L   | 820px  | 1180px |
+| Laptop     | 1366px | 768px  |
+| Desktop    | 1440px | 900px  |
 | Desktop HD | 1920px | 1080px |
 
 **Steps:**
+
 1. Open `http://localhost:8000`
 2. Press `F12` → DevTools
 3. Click the "Toggle device toolbar" icon (or `Ctrl + Shift + M`)
 4. Select preset or enter custom dimensions
 
 **Things to verify at each breakpoint:**
+
 - [ ] No horizontal scrollbar
 - [ ] Navbar collapses to hamburger at `md` breakpoint
 - [ ] Feature cards stack from 3-col → 2-col → 1-col
@@ -527,6 +550,7 @@ Use Chrome DevTools to test at these viewports:
 ### Before (Initial Prototype)
 
 The initial prototype (`resources/views/home.blade.php`) was a basic stub:
+
 - White/gray background (default Tailwind)
 - No consistent design system
 - Emoji icons instead of SVG
@@ -538,6 +562,7 @@ The initial prototype (`resources/views/home.blade.php`) was a basic stub:
 ### After (Final Polished Interface)
 
 The rebuilt landing page features:
+
 - **Dark charcoal design system** (`#0A0D0B` base)
 - **Warm green accent** (`#9AF06A`) for brand consistency
 - **11 reusable Blade Components** with full prop support
@@ -551,16 +576,16 @@ The rebuilt landing page features:
 
 ### Key Improvement Areas
 
-| Area | Before | After |
-|------|--------|-------|
-| Color scheme | White/gray, orange accent | Dark charcoal + green accent |
-| Icons | Emoji (☕🎁📍) | Inline SVG (Lucide-style) |
-| Navigation | Basic, no mobile menu | Sticky blur nav + mobile hamburger |
-| Cards | White cards, no hover | Dark surface cards with hover lift |
-| Typography | Standard size | Large hero H1, gradient accent text |
-| Components | 7 basic stubs | 11 polished, fully-documented components |
-| Responsiveness | Basic | Mobile-first, 8 breakpoints tested |
-| Accessibility | None | ARIA labels, focus rings, skip link |
+| Area           | Before                    | After                                    |
+| -------------- | ------------------------- | ---------------------------------------- |
+| Color scheme   | White/gray, orange accent | Dark charcoal + green accent             |
+| Icons          | Emoji (☕🎁📍)            | Inline SVG (Lucide-style)                |
+| Navigation     | Basic, no mobile menu     | Sticky blur nav + mobile hamburger       |
+| Cards          | White cards, no hover     | Dark surface cards with hover lift       |
+| Typography     | Standard size             | Large hero H1, gradient accent text      |
+| Components     | 7 basic stubs             | 11 polished, fully-documented components |
+| Responsiveness | Basic                     | Mobile-first, 8 breakpoints tested       |
+| Accessibility  | None                      | ARIA labels, focus rings, skip link      |
 
 ---
 
@@ -568,26 +593,27 @@ The rebuilt landing page features:
 
 > **This is a student academic redesign project created for ITST 302 – Client-Server Technologies.**
 >
-> **It is NOT the official Sideout Café website.**
+> **It is NOT the official Sideout Cafe website.**
 
 **Content integrity notes:**
-- Business name, location (Lumban, Laguna 4014), loyalty program details ("1 point per personal drink"), and the two verified URLs (official website + Google Maps) are sourced from the official Sideout Café website.
-- **Sample pricing (₱149, ₱249, ₱399)** is academic prototype content — NOT official Sideout Café menu prices.
-- **Sample testimonials (Sample Customer 01/02/03)** are fictional — NOT real Sideout Café customer reviews.
+
+- Business name, location (Lumban, Laguna 4014), loyalty program details ("1 point per personal drink"), and the two verified URLs (official website + Google Maps) are sourced from the official Sideout Cafe website.
+- **Sample pricing (₱149, ₱249, ₱399)** is academic prototype content — NOT official Sideout Cafe menu prices.
+- **Sample testimonials (Sample Customer 01/02/03)** are fictional — NOT real Sideout Cafe customer reviews.
 - Opening hours, phone number, email, and social media handles are NOT included as they could not be verified from official sources.
 
 ---
 
 ## 15. Credits & References
 
-| Resource | URL |
-|----------|-----|
-| Official Sideout Café Website | [sideout-cafe.com](https://www.sideout-cafe.com/) |
-| Sideout Café on Google Maps | [maps.app.goo.gl/cUTeXGX83iXzW5D18](https://maps.app.goo.gl/cUTeXGX83iXzW5D18) |
-| Laravel Documentation | [laravel.com/docs](https://laravel.com/docs) |
-| Tailwind CSS Documentation | [tailwindcss.com/docs](https://tailwindcss.com/docs) |
-| Lucide Icons (SVG reference) | [lucide.dev](https://lucide.dev) |
-| Instrument Sans font | [Bunny Fonts](https://fonts.bunny.net) |
+| Resource                      | URL                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------ |
+| Official Sideout Cafe Website | [sideout-cafe.com](https://www.sideout-cafe.com/)                              |
+| Sideout Cafe on Google Maps   | [maps.app.goo.gl/cUTeXGX83iXzW5D18](https://maps.app.goo.gl/cUTeXGX83iXzW5D18) |
+| Laravel Documentation         | [laravel.com/docs](https://laravel.com/docs)                                   |
+| Tailwind CSS Documentation    | [tailwindcss.com/docs](https://tailwindcss.com/docs)                           |
+| Lucide Icons (SVG reference)  | [lucide.dev](https://lucide.dev)                                               |
+| Instrument Sans font          | [Bunny Fonts](https://fonts.bunny.net)                                         |
 
 ---
 
@@ -601,4 +627,4 @@ https://github.com/YOUR_USERNAME/week05-product-landing-page
 
 ---
 
-*README prepared for ITST 302 – Client-Server Technologies · Week 5 · MP04 · Academic Year 2026*
+_README prepared for ITST 302 – Client-Server Technologies · Week 5 · MP04 · Academic Year 2026_
