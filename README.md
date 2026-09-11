@@ -589,6 +589,16 @@ week05-product-landing-page/
 
 ## 9. Screenshots
 
+### Before & After Design Evolution
+
+**Before Redesign (Initial Prototype)**
+![Initial grid overlay prototype](screenshots/before.png)
+
+**After Redesign (Final Polished Interface)**
+![Final polished interface](screenshots/desktop.png)
+
+---
+
 ### Device Layouts
 
 **Desktop View (1440 × 900px)**
@@ -604,7 +614,7 @@ week05-product-landing-page/
 
 ### Page Sections
 
-**Features**
+**Features Section**
 ![Features — large block + 2x2 grid](screenshots/features.png)
 
 **Menu & Pricing**
@@ -615,6 +625,16 @@ week05-product-landing-page/
 
 **Footer**
 ![4-column footer](screenshots/footer.png)
+
+---
+
+### Project Architecture & Repository
+
+**VS Code Project Structure**
+![VS Code Explorer — full project tree](screenshots/folder_structure.png)
+
+**GitHub Repository**
+![GitHub repository page](screenshots/repo.png)
 
 ---
 
