@@ -592,10 +592,10 @@ week05-product-landing-page/
 ### Device Layouts
 
 **Desktop View (1440 × 900px)**
-![Full desktop view](screenshots/desktop.jpg)
+![Full desktop view](screenshots/desktop.png)
 
 **Tablet View (768 × 1024px)**
-![Tablet view](screenshots/tablet.jpg)
+![Tablet view](screenshots/tablet.png)
 
 **Mobile View (390 × 844px)**
 ![Mobile view](screenshots/mobile.png)
@@ -621,7 +621,7 @@ week05-product-landing-page/
 ### Project Files & Version Control
 
 **VS Code Project Structure**
-![VS Code Explorer — full project tree](screenshots/folder_structure.jpg)
+![VS Code Explorer — full project tree](screenshots/folder_structure.png)
 
 **GitHub Repository**
 ![GitHub repository page](screenshots/repo.png)
