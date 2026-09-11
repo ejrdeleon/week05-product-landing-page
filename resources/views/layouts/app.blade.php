@@ -7,17 +7,16 @@
 
     {{-- SEO Meta --}}
     <meta name="description"
-          content="A modern responsive digital experience concept for Sideout Café in Lumban, Laguna, featuring loyalty rewards, café information, and a mobile-friendly interface.">
+          content="Sideout Café is a local coffee spot in Lumban, Laguna serving specialty coffee, non-coffee drinks, and a loyalty program that rewards every visit.">
     <meta name="keywords"
-          content="Sideout Café, Lumban Laguna, coffee, loyalty rewards, café Philippines">
-    <meta name="author" content="ITST 302 Student – Academic Project">
-    <meta name="robots" content="noindex, nofollow">
+          content="Sideout Café, Lumban Laguna, coffee shop, loyalty rewards, café Philippines">
+    <meta name="robots" content="index, follow">
 
-    {{-- Open Graph (Placeholder) --}}
+    {{-- Open Graph --}}
     <meta property="og:type"        content="website">
-    <meta property="og:url"         content="https://www.sideout-cafe.com/">
+    <meta property="og:url"         content="{{ url()->current() }}">
     <meta property="og:title"       content="Sideout Café | Coffee &amp; Community in Lumban, Laguna">
-    <meta property="og:description" content="Experience the warmth of Sideout Café. Join our loyalty program and earn a point for every personal drink.">
+    <meta property="og:description" content="Your local coffee stop in Lumban, Laguna. Join the loyalty program and earn a point for every personal drink.">
     <meta property="og:image"       content="">
 
     {{-- Twitter Card --}}

@@ -111,3 +111,22 @@ html {
     transition: all 0.3s ease-in-out;
     overflow: hidden;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   MENU BOARD STYLE
+───────────────────────────────────────────────────────────────────────────── */
+.menu-script {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: -0.08em;
+    line-height: 0.8;
+    font-style: italic;
+    transform: scaleY(1.1);
+    text-transform: uppercase;
+    text-shadow: 0 2px 0 rgba(12, 47, 42, 0.08);
+}
+
+@media (max-width: 640px) {
+    .menu-script {
+        top: 1.5rem;
+    }
+}

@@ -4,19 +4,16 @@
     │  Reusable testimonial card with SVG avatar + stars                  │
     │                                                                     │
     │  Props:                                                             │
-    │   $name     – customer display name (sample name for prototype)     │
+    │   $name     – customer display name                                 │
     │   $position – customer role/description                             │
     │   $review   – review text                                           │
     │   $stars    – star rating 1–5 (default: 5)                          │
     │   $initials – 1–2 letter avatar initials (auto-derived if empty)    │
-    │                                                                     │
-    │  ⚠ All testimonials are sample content for the academic prototype.  │
-    │    These are NOT real customer reviews.                             │
     └─────────────────────────────────────────────────────────────────────┘
 --}}
 
 @props([
-    'name'     => 'Sample Customer',
+    'name'     => 'Guest',
     'position' => 'Café Visitor',
     'review'   => '',
     'stars'    => 5,
@@ -80,9 +77,4 @@
             <p class="text-so-muted text-xs">{{ $position }}</p>
         </div>
     </div>
-
-    {{-- Academic prototype disclaimer --}}
-    <p class="text-[9px] text-so-muted/30 leading-relaxed">
-        Sample testimonial · Academic prototype · ITST 302
-    </p>
 </article>

@@ -1,25 +1,24 @@
 {{--
     ┌─────────────────────────────────────────────────────────────────────┐
     │  <x-pricing-card>                                                   │
-    │  Reusable pricing card with academic disclaimer                     │
+    │  Café menu / drink offering card                                    │
     │                                                                     │
     │  Props:                                                             │
-    │   $plan     – plan name                                             │
-    │   $price    – formatted price string (e.g., '₱149')                │
-    │   $popular  – boolean, highlights this as the most popular plan     │
-    │   $ctaLabel – CTA button label (default: 'Get Started')             │
-    │   $slot     – list of feature <li> items                            │
-    │                                                                     │
-    │  ⚠ All prices and features are sample academic content.             │
-    │    They are NOT official Sideout Café pricing.                      │
+    │   $plan     – drink or offering name                                │
+    │   $price    – display price string (e.g., '₱149'), optional         │
+    │   $popular  – boolean, highlights this as a featured pick           │
+    │   $ctaLabel – CTA button label (default: 'View Menu')               │
+    │   $category – small label above the name (e.g., 'Coffee')          │
+    │   $slot     – list of short detail <li> items                       │
     └─────────────────────────────────────────────────────────────────────┘
 --}}
 
 @props([
-    'plan'     => 'Plan',
-    'price'    => '₱0',
+    'plan'     => 'Drink',
+    'price'    => null,
     'popular'  => false,
-    'ctaLabel' => 'Get Started',
+    'ctaLabel' => 'View Menu',
+    'category' => null,
 ])
 
 <div
@@ -31,36 +30,39 @@
                : 'bg-so-surface border-white/[0.06] hover:border-white/[0.14]
                   hover:shadow-black/30' }}"
 >
-    {{-- Popular badge --}}
+    {{-- Featured badge --}}
     @if ($popular)
         <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
-            <x-badge color="green">Most Popular</x-badge>
+            <x-badge color="green">Customer Favorite</x-badge>
         </div>
     @endif
 
     <div class="flex flex-col gap-5 p-7 flex-grow">
 
-        {{-- Plan name --}}
+        {{-- Drink name --}}
         <div>
+            @if ($category)
+                <p class="text-[10px] text-so-accent/70 mt-0.5 uppercase tracking-wider font-semibold mb-1">
+                    {{ $category }}
+                </p>
+            @endif
             <h3 class="text-so-text font-bold text-lg">{{ $plan }}</h3>
-            <p class="text-[10px] text-so-muted/50 mt-0.5 uppercase tracking-wider font-medium">
-                Sample academic pricing · Not official
-            </p>
         </div>
 
         {{-- Price display --}}
-        <div class="flex items-end gap-1.5">
-            <span class="text-5xl font-bold tracking-tighter
-                         {{ $popular ? 'text-so-accent' : 'text-so-text' }}">
-                {{ $price }}
-            </span>
-            <span class="text-so-muted text-sm mb-1.5 leading-none">/ visit</span>
-        </div>
+        @if ($price)
+            <div class="flex items-end gap-1.5">
+                <span class="text-4xl font-bold tracking-tighter
+                             {{ $popular ? 'text-so-accent' : 'text-so-text' }}">
+                    {{ $price }}
+                </span>
+            </div>
+        @endif
 
         {{-- Divider --}}
         <div class="h-px bg-white/[0.06]"></div>
 
-        {{-- Features list --}}
+        {{-- Details list --}}
         <ul class="flex flex-col gap-3 flex-grow text-sm text-so-muted" role="list">
             {{ $slot }}
         </ul>
@@ -71,17 +73,10 @@
     <div class="px-7 pb-7">
         <x-button
             variant="{{ $popular ? 'primary' : 'secondary' }}"
-            href="https://www.sideout-cafe.com/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="{{ route('menu') }}"
             class="w-full"
         >
             {{ $ctaLabel }}
         </x-button>
-
-        {{-- Academic disclaimer --}}
-        <p class="text-[10px] text-so-muted/40 text-center mt-3 leading-relaxed">
-            ⚠ Sample content for academic prototype — not official Sideout Café pricing.
-        </p>
     </div>
 </div>
