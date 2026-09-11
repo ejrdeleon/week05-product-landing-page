@@ -592,39 +592,39 @@ week05-product-landing-page/
 ### Device Layouts
 
 **Desktop View (1440 × 900px)**
-![Full desktop view](desktop.jpg)
+![Full desktop view](screenshots/desktop.jpg)
 
 **Tablet View (768 × 1024px)**
-![Tablet view](tablet.jpg)
+![Tablet view](screenshots/tablet.jpg)
 
 **Mobile View (390 × 844px)**
-![Mobile view](mobile.png)
+![Mobile view](screenshots/mobile.png)
 
 ---
 
 ### Page Sections
 
 **Features**
-![Features — large block + 2x2 grid](features.png)
+![Features — large block + 2x2 grid](screenshots/features.png)
 
 **Menu & Pricing**
-![Menu section with real drink data](menu.png)
+![Menu section with real drink data](screenshots/menu.png)
 
 **Testimonials**
-![Staggered testimonial cards](testimonials.png)
+![Staggered testimonial cards](screenshots/testimonials.png)
 
 **Footer**
-![4-column footer](footer.png)
+![4-column footer](screenshots/footer.png)
 
 ---
 
 ### Project Files & Version Control
 
 **VS Code Project Structure**
-![VS Code Explorer — full project tree](folder_structure.jpg)
+![VS Code Explorer — full project tree](screenshots/folder_structure.jpg)
 
 **GitHub Repository**
-![GitHub repository page](repo.png)
+![GitHub repository page](screenshots/repo.png)
 
 ---
 
