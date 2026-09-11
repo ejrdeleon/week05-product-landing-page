@@ -3,15 +3,10 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   DESIGN SYSTEM TOKENS
-   Sideout Café – dark charcoal + warm green accent
-───────────────────────────────────────────────────────────────────────────── */
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-    /* Brand palette */
     --color-so-bg:       #0A0D0B;
     --color-so-surface:  #111613;
     --color-so-surface2: #171D19;
@@ -20,18 +15,13 @@
     --color-so-text:     #F5F7F2;
     --color-so-muted:    #9CA69D;
 
-    /* Animations */
-    --animate-fade-up:    fade-up 0.6s ease-out both;
-    --animate-fade-in:    fade-in 0.5s ease-out both;
-    --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+    --animate-fade-up:  fade-up 0.55s ease-out both;
+    --animate-fade-in:  fade-in 0.45s ease-out both;
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   KEYFRAMES
-───────────────────────────────────────────────────────────────────────────── */
 @keyframes fade-up {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0);    }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fade-in {
@@ -39,47 +29,20 @@
     to   { opacity: 1; }
 }
 
-@keyframes pulse-glow {
-    0%, 100% { opacity: 0.3; }
-    50%       { opacity: 0.7; }
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0A0D0B; }
+::-webkit-scrollbar-thumb { background: #2a3a2d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9AF06A; }
+
+.gradient-text {
+    background: linear-gradient(135deg, #9AF06A 0%, #D9F7C0 60%, #9AF06A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   GLOBAL RESETS
-───────────────────────────────────────────────────────────────────────────── */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: #0A0D0B;
-}
-::-webkit-scrollbar-thumb {
-    background: #2a3a2d;
-    border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #9AF06A;
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   HERO GLOW ORB (non-interactive decorative element)
-───────────────────────────────────────────────────────────────────────────── */
-.glow-orb {
-    pointer-events: none;
-    position: absolute;
-    border-radius: 9999px;
-    background: radial-gradient(circle, rgba(154, 240, 106, 0.18) 0%, transparent 70%);
-    animation: pulse-glow 4s ease-in-out infinite;
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   GLASS CARD EFFECT
-───────────────────────────────────────────────────────────────────────────── */
 .glass-card {
     background: rgba(23, 29, 25, 0.7);
     backdrop-filter: blur(12px);
@@ -87,46 +50,13 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   GRADIENT TEXT UTILITY
-───────────────────────────────────────────────────────────────────────────── */
-.gradient-text {
-    background: linear-gradient(135deg, #9AF06A 0%, #D9F7C0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   ACCENT BORDER GRADIENT
-───────────────────────────────────────────────────────────────────────────── */
-.accent-border {
-    border: 1px solid rgba(154, 240, 106, 0.3);
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   MOBILE MENU TRANSITION
-───────────────────────────────────────────────────────────────────────────── */
 #mobile-menu {
-    transition: all 0.3s ease-in-out;
     overflow: hidden;
+    transition: max-height 0.32s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   MENU BOARD STYLE
-───────────────────────────────────────────────────────────────────────────── */
-.menu-script {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: -0.08em;
-    line-height: 0.8;
-    font-style: italic;
-    transform: scaleY(1.1);
-    text-transform: uppercase;
-    text-shadow: 0 2px 0 rgba(12, 47, 42, 0.08);
-}
-
-@media (max-width: 640px) {
-    .menu-script {
-        top: 1.5rem;
-    }
+.hr-accent {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(154,240,106,0.25), transparent);
+    border: none;
 }

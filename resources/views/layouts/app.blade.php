@@ -7,25 +7,25 @@
 
     {{-- SEO Meta --}}
     <meta name="description"
-          content="Sideout Café is a local coffee spot in Lumban, Laguna serving specialty coffee, non-coffee drinks, and a loyalty program that rewards every visit.">
+          content="Sideout Cafe is a local coffee spot in Lumban, Laguna serving specialty coffee, non-coffee drinks, and a loyalty program that rewards every visit.">
     <meta name="keywords"
-          content="Sideout Café, Lumban Laguna, coffee shop, loyalty rewards, café Philippines">
+          content="Sideout Cafe, Lumban Laguna, coffee shop, loyalty rewards, cafe Philippines">
     <meta name="robots" content="index, follow">
 
     {{-- Open Graph --}}
     <meta property="og:type"        content="website">
     <meta property="og:url"         content="{{ url()->current() }}">
-    <meta property="og:title"       content="Sideout Café | Coffee &amp; Community in Lumban, Laguna">
+    <meta property="og:title"       content="Sideout Cafe | Coffee &amp; Community in Lumban, Laguna">
     <meta property="og:description" content="Your local coffee stop in Lumban, Laguna. Join the loyalty program and earn a point for every personal drink.">
     <meta property="og:image"       content="">
 
     {{-- Twitter Card --}}
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="Sideout Café | Coffee &amp; Community in Lumban, Laguna">
-    <meta name="twitter:description" content="Experience the warmth of Sideout Café. Join our loyalty program.">
+    <meta name="twitter:title"       content="Sideout Cafe | Coffee &amp; Community in Lumban, Laguna">
+    <meta name="twitter:description" content="Experience the warmth of Sideout Cafe. Join our loyalty program.">
 
     {{-- Page Title --}}
-    <title>@yield('title', 'Sideout Café | Coffee &amp; Community in Lumban, Laguna')</title>
+    <title>@yield('title', 'Sideout Cafe | Coffee &amp; Community in Lumban, Laguna')</title>
 
     {{-- Favicon (inline SVG data URI – coffee cup emoji) --}}
     <link rel="icon"

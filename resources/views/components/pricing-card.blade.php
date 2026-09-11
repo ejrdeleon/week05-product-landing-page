@@ -1,82 +1,50 @@
-{{--
-    ┌─────────────────────────────────────────────────────────────────────┐
-    │  <x-pricing-card>                                                   │
-    │  Café menu / drink offering card                                    │
-    │                                                                     │
-    │  Props:                                                             │
-    │   $plan     – drink or offering name                                │
-    │   $price    – display price string (e.g., '₱149'), optional         │
-    │   $popular  – boolean, highlights this as a featured pick           │
-    │   $ctaLabel – CTA button label (default: 'View Menu')               │
-    │   $category – small label above the name (e.g., 'Coffee')          │
-    │   $slot     – list of short detail <li> items                       │
-    └─────────────────────────────────────────────────────────────────────┘
---}}
-
 @props([
     'plan'     => 'Drink',
     'price'    => null,
     'popular'  => false,
-    'ctaLabel' => 'View Menu',
+    'ctaLabel' => 'Order Now',
     'category' => null,
 ])
 
-<div
-    class="relative flex flex-col rounded-3xl border transition-all duration-300
-           hover:-translate-y-1 hover:shadow-2xl
-           {{ $popular
-               ? 'bg-so-surface2 border-so-accent/40 shadow-xl shadow-so-accent/10
-                  hover:border-so-accent/60 hover:shadow-so-accent/20'
-               : 'bg-so-surface border-white/[0.06] hover:border-white/[0.14]
-                  hover:shadow-black/30' }}"
->
-    {{-- Featured badge --}}
+<div class="relative flex flex-col rounded-2xl border transition-all duration-300
+            {{ $popular
+                ? 'bg-so-surface2 border-so-accent/35 shadow-lg shadow-so-accent/8'
+                : 'bg-so-surface border-white/[0.06] hover:border-white/[0.14]' }}">
+
     @if ($popular)
-        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
-            <x-badge color="green">Customer Favorite</x-badge>
+        <div class="absolute -top-3 left-6 z-10">
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-so-accent text-so-bg">
+                ★ House Favorite
+            </span>
         </div>
     @endif
 
-    <div class="flex flex-col gap-5 p-7 flex-grow">
-
-        {{-- Drink name --}}
-        <div>
-            @if ($category)
-                <p class="text-[10px] text-so-accent/70 mt-0.5 uppercase tracking-wider font-semibold mb-1">
-                    {{ $category }}
-                </p>
-            @endif
-            <h3 class="text-so-text font-bold text-lg">{{ $plan }}</h3>
-        </div>
-
-        {{-- Price display --}}
-        @if ($price)
-            <div class="flex items-end gap-1.5">
-                <span class="text-4xl font-bold tracking-tighter
-                             {{ $popular ? 'text-so-accent' : 'text-so-text' }}">
-                    {{ $price }}
-                </span>
-            </div>
+    <div class="flex flex-col gap-4 p-6 flex-grow">
+        @if ($category)
+            <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-so-accent/70">{{ $category }}</p>
         @endif
 
-        {{-- Divider --}}
+        <div class="flex items-start justify-between gap-3">
+            <h3 class="text-so-text font-bold text-lg leading-snug">{{ $plan }}</h3>
+            @if ($price)
+                <span class="text-2xl font-bold {{ $popular ? 'text-so-accent' : 'text-so-text' }} flex-shrink-0">{{ $price }}</span>
+            @endif
+        </div>
+
         <div class="h-px bg-white/[0.06]"></div>
 
-        {{-- Details list --}}
-        <ul class="flex flex-col gap-3 flex-grow text-sm text-so-muted" role="list">
+        <ul class="flex flex-col gap-2.5 flex-grow text-sm text-so-muted" role="list">
             {{ $slot }}
         </ul>
-
     </div>
 
-    {{-- CTA footer --}}
-    <div class="px-7 pb-7">
-        <x-button
-            variant="{{ $popular ? 'primary' : 'secondary' }}"
-            href="{{ route('menu') }}"
-            class="w-full"
-        >
+    <div class="px-6 pb-6">
+        <a href="{{ route('menu') }}"
+           class="flex items-center justify-center w-full px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors duration-200
+                  {{ $popular
+                      ? 'bg-so-accent text-so-bg hover:bg-so-accent2'
+                      : 'bg-so-surface2 text-so-text border border-white/10 hover:border-white/20' }}">
             {{ $ctaLabel }}
-        </x-button>
+        </a>
     </div>
 </div>

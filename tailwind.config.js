@@ -35,7 +35,6 @@ export default {
                 'fade-up':    'fadeUp 0.6s ease-out both',
                 'fade-in':    'fadeIn 0.5s ease-out both',
                 'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
-                'spin-slow':  'spin 10s linear infinite',
             },
             keyframes: {
                 fadeUp: {
@@ -50,9 +49,6 @@ export default {
                     '0%, 100%': { opacity: '0.3' },
                     '50%':      { opacity: '0.7' },
                 },
-            },
-            transitionDuration: {
-                '400': '400ms',
             },
         },
     },
