@@ -68,22 +68,22 @@ Sideout Cafe is a real café in Lumban, Laguna, Philippines (4014). Their offici
 
 ## 3. Objectives
 
-| Objective | Where It Was Applied |
-| --- | --- |
-| ✅ Build responsive layouts with Tailwind CSS | All sections across all pages |
-| ✅ Create and reuse Laravel Blade Components | 11 components across the project |
-| ✅ Apply mobile-first responsive design | All breakpoints from 320px upward |
-| ✅ Implement modular component architecture | `resources/views/components/` |
-| ✅ Use CSS Grid for multi-column layouts | Features, Menu, Footer, Hero |
-| ✅ Use Flexbox for inline and navigation layouts | Navbar, buttons, stat strips |
-| ✅ Apply Tailwind utility classes and breakpoints | Throughout all components |
-| ✅ Demonstrate UI/UX design principles | Dark design system, visual hierarchy |
-| ✅ Structure a Laravel application with layouts | `layouts/app.blade.php` |
-| ✅ Implement a working contact form with validation | `ContactController.php` |
-| ✅ Connect to the official business website | All pages link to `sideout-cafe.com` |
-| ✅ Use real menu data from the official source | Menu page and home page menu section |
-| ✅ Use Git for version control | Commits throughout development |
-| ✅ Prepare a GitHub-ready public repository | `.gitignore`, README, clean structure |
+| Objective                                           | Where It Was Applied                  |
+| --------------------------------------------------- | ------------------------------------- |
+| ✅ Build responsive layouts with Tailwind CSS       | All sections across all pages         |
+| ✅ Create and reuse Laravel Blade Components        | 11 components across the project      |
+| ✅ Apply mobile-first responsive design             | All breakpoints from 320px upward     |
+| ✅ Implement modular component architecture         | `resources/views/components/`         |
+| ✅ Use CSS Grid for multi-column layouts            | Features, Menu, Footer, Hero          |
+| ✅ Use Flexbox for inline and navigation layouts    | Navbar, buttons, stat strips          |
+| ✅ Apply Tailwind utility classes and breakpoints   | Throughout all components             |
+| ✅ Demonstrate UI/UX design principles              | Dark design system, visual hierarchy  |
+| ✅ Structure a Laravel application with layouts     | `layouts/app.blade.php`               |
+| ✅ Implement a working contact form with validation | `ContactController.php`               |
+| ✅ Connect to the official business website         | All pages link to `sideout-cafe.com`  |
+| ✅ Use real menu data from the official source      | Menu page and home page menu section  |
+| ✅ Use Git for version control                      | Commits throughout development        |
+| ✅ Prepare a GitHub-ready public repository         | `.gitignore`, README, clean structure |
 
 ---
 
@@ -95,33 +95,31 @@ The whole project is built mobile-first. That means the base styles are written 
 
 ```html
 <!-- starts as 1 column on mobile, expands to 4 on desktop -->
-<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-    ...
-</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">...</div>
 ```
 
 ### Responsive Breakpoints
 
-| Prefix | Min-width | Used For |
-| --- | --- | --- |
-| _(none)_ | 0px | Mobile base styles |
-| `sm:` | 640px | Large phones, small tablets |
-| `md:` | 768px | Tablets |
-| `lg:` | 1024px | Laptops |
-| `xl:` | 1280px | Desktops |
-| `2xl:` | 1536px | Wide monitors |
+| Prefix   | Min-width | Used For                    |
+| -------- | --------- | --------------------------- |
+| _(none)_ | 0px       | Mobile base styles          |
+| `sm:`    | 640px     | Large phones, small tablets |
+| `md:`    | 768px     | Tablets                     |
+| `lg:`    | 1024px    | Laptops                     |
+| `xl:`    | 1280px    | Desktops                    |
+| `2xl:`   | 1536px    | Wide monitors               |
 
 ### Tested Viewports
 
-| Device | Size |
-| --- | --- |
-| iPhone SE | 375 × 667px |
-| iPhone 14 | 390 × 844px |
-| Android | 414 × 896px |
-| iPad | 768 × 1024px |
-| iPad Air | 820 × 1180px |
-| Laptop | 1366 × 768px |
-| Desktop | 1440 × 900px |
+| Device       | Size          |
+| ------------ | ------------- |
+| iPhone SE    | 375 × 667px   |
+| iPhone 14    | 390 × 844px   |
+| Android      | 414 × 896px   |
+| iPad         | 768 × 1024px  |
+| iPad Air     | 820 × 1180px  |
+| Laptop       | 1366 × 768px  |
+| Desktop      | 1440 × 900px  |
 | Wide Desktop | 1920 × 1080px |
 
 ### Flexbox
@@ -148,9 +146,7 @@ Grid handles all the multi-column sections.
 
 ```html
 <!-- asymmetric hero: text left, card right -->
-<div class="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px]">
-    ...
-</div>
+<div class="grid lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px]">...</div>
 
 <!-- features: big block left, 2x2 grid right -->
 <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
@@ -158,14 +154,10 @@ Grid handles all the multi-column sections.
 </div>
 
 <!-- full menu: 4 categories -->
-<div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-    ...
-</div>
+<div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">...</div>
 
 <!-- footer -->
-<div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
-    ...
-</div>
+<div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">...</div>
 ```
 
 ### User Experience (UX)
@@ -211,15 +203,15 @@ Instead of writing `.card { background: ...; border-radius: ...; }` in a separat
 
 ```css
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
 
-    --color-so-bg:       #0A0D0B;
-    --color-so-surface:  #111613;
-    --color-so-surface2: #171D19;
-    --color-so-accent:   #9AF06A;
-    --color-so-accent2:  #D9F7C0;
-    --color-so-text:     #F5F7F2;
-    --color-so-muted:    #9CA69D;
+    --color-so-bg: #0a0d0b;
+    --color-so-surface: #111613;
+    --color-so-surface2: #171d19;
+    --color-so-accent: #9af06a;
+    --color-so-accent2: #d9f7c0;
+    --color-so-text: #f5f7f2;
+    --color-so-muted: #9ca69d;
 }
 ```
 
@@ -229,7 +221,9 @@ After defining these, `bg-so-bg`, `text-so-accent`, `border-so-surface2`, etc. a
 
 ```html
 <!-- fluid hero heading — no breakpoint jumps needed -->
-<h1 class="text-[clamp(2.6rem,7vw,5.5rem)] font-black leading-[0.95] tracking-[-0.04em]">
+<h1
+    class="text-[clamp(2.6rem,7vw,5.5rem)] font-black leading-[0.95] tracking-[-0.04em]"
+>
     Where every cup feels like home.
 </h1>
 
@@ -246,34 +240,52 @@ After defining these, `bg-so-bg`, `text-so-accent`, `border-so-surface2`, etc. a
 ### Component Styling Examples
 
 **Navbar:**
+
 ```html
-<header class="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06]
-               bg-so-bg/95 backdrop-blur-md">
+<header
+    class="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06]
+               bg-so-bg/95 backdrop-blur-md"
+></header>
 ```
 
 **Feature card:**
+
 ```html
-<div class="group flex flex-col gap-4 p-6 rounded-2xl bg-so-surface
+<div
+    class="group flex flex-col gap-4 p-6 rounded-2xl bg-so-surface
             border border-white/[0.06] hover:border-so-accent/30
-            hover:bg-so-surface2 transition-all duration-300">
+            hover:bg-so-surface2 transition-all duration-300"
+></div>
 ```
 
 **Primary button:**
+
 ```html
-<a class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
+<a
+    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl
           bg-so-accent text-so-bg text-sm font-bold
-          hover:bg-so-accent2 transition-colors duration-200">
+          hover:bg-so-accent2 transition-colors duration-200"
+>
     View the Menu
 </a>
 ```
 
 **Loyalty point grid:**
+
 ```html
 <div class="grid grid-cols-5 gap-2">
-    <div class="h-8 rounded-lg bg-so-accent text-so-bg flex items-center
-                justify-center text-xs font-bold">✓</div>
-    <div class="h-8 rounded-lg bg-so-bg border border-white/10
-                text-so-muted/40 flex items-center justify-center text-xs">8</div>
+    <div
+        class="h-8 rounded-lg bg-so-accent text-so-bg flex items-center
+                justify-center text-xs font-bold"
+    >
+        ✓
+    </div>
+    <div
+        class="h-8 rounded-lg bg-so-bg border border-white/10
+                text-so-muted/40 flex items-center justify-center text-xs"
+    >
+        8
+    </div>
 </div>
 ```
 
@@ -281,25 +293,27 @@ After defining these, `bg-so-bg`, `text-so-accent`, `border-so-surface2`, etc. a
 
 ```js
 export default {
-    content: [
-        './resources/**/*.blade.php',
-        './resources/**/*.js',
-    ],
+    content: ["./resources/**/*.blade.php", "./resources/**/*.js"],
     theme: {
         extend: {
             colors: {
-                'so': {
-                    'bg':       '#0A0D0B',
-                    'surface':  '#111613',
-                    'surface2': '#171D19',
-                    'accent':   '#9AF06A',
-                    'accent2':  '#D9F7C0',
-                    'text':     '#F5F7F2',
-                    'muted':    '#9CA69D',
+                so: {
+                    bg: "#0A0D0B",
+                    surface: "#111613",
+                    surface2: "#171D19",
+                    accent: "#9AF06A",
+                    accent2: "#D9F7C0",
+                    text: "#F5F7F2",
+                    muted: "#9CA69D",
                 },
             },
             fontFamily: {
-                sans: ['Instrument Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                sans: [
+                    "Instrument Sans",
+                    "ui-sans-serif",
+                    "system-ui",
+                    "sans-serif",
+                ],
             },
         },
     },
@@ -337,19 +351,19 @@ It also keeps page templates clean. `home.blade.php` reads like a list of sectio
 
 ### Component Inventory
 
-| Component | File | What It Does |
-| --- | --- | --- |
-| `<x-navbar>` | `navbar.blade.php` | Sticky nav with mobile hamburger menu |
-| `<x-hero>` | `hero.blade.php` | Asymmetric two-column hero section |
-| `<x-feature-card>` | `feature-card.blade.php` | Icon + title + description tile |
-| `<x-pricing-card>` | `pricing-card.blade.php` | Menu/drink card with optional featured badge |
-| `<x-testimonial-card>` | `testimonial-card.blade.php` | Star rating + review + author |
-| `<x-footer>` | `footer.blade.php` | Four-column footer |
-| `<x-button>` | `button.blade.php` | Button with four style variants |
-| `<x-container>` | `container.blade.php` | Max-width wrapper with responsive padding |
-| `<x-badge>` | `badge.blade.php` | Small pill/label badge |
-| `<x-section-heading>` | `section-heading.blade.php` | Label + heading + subtitle pattern |
-| `<x-stat-card>` | `stat-card.blade.php` | Large number + label display |
+| Component              | File                         | What It Does                                 |
+| ---------------------- | ---------------------------- | -------------------------------------------- |
+| `<x-navbar>`           | `navbar.blade.php`           | Sticky nav with mobile hamburger menu        |
+| `<x-hero>`             | `hero.blade.php`             | Asymmetric two-column hero section           |
+| `<x-feature-card>`     | `feature-card.blade.php`     | Icon + title + description tile              |
+| `<x-pricing-card>`     | `pricing-card.blade.php`     | Menu/drink card with optional featured badge |
+| `<x-testimonial-card>` | `testimonial-card.blade.php` | Star rating + review + author                |
+| `<x-footer>`           | `footer.blade.php`           | Four-column footer                           |
+| `<x-button>`           | `button.blade.php`           | Button with four style variants              |
+| `<x-container>`        | `container.blade.php`        | Max-width wrapper with responsive padding    |
+| `<x-badge>`            | `badge.blade.php`            | Small pill/label badge                       |
+| `<x-section-heading>`  | `section-heading.blade.php`  | Label + heading + subtitle pattern           |
+| `<x-stat-card>`        | `stat-card.blade.php`        | Large number + label display                 |
 
 ### `<x-feature-card>` Example
 
@@ -428,16 +442,16 @@ Auto-derives initials from the name and clamps stars between 1 and 5.
 
 ### Color Palette
 
-| Role | Token | Hex | Used For |
-| --- | --- | --- | --- |
-| Background | `bg-so-bg` | `#0A0D0B` | Page background |
-| Surface | `bg-so-surface` | `#111613` | Cards, sections |
-| Surface 2 | `bg-so-surface2` | `#171D19` | Elevated cards, inputs |
-| Primary Accent | `text-so-accent` | `#9AF06A` | CTAs, highlights, icons |
-| Secondary Accent | `text-so-accent2` | `#D9F7C0` | Hover states |
-| Text | `text-so-text` | `#F5F7F2` | Headings, body text |
-| Muted | `text-so-muted` | `#9CA69D` | Secondary text, labels |
-| Borders | — | `rgba(255,255,255,0.06–0.14)` | Card borders |
+| Role             | Token             | Hex                           | Used For                |
+| ---------------- | ----------------- | ----------------------------- | ----------------------- |
+| Background       | `bg-so-bg`        | `#0A0D0B`                     | Page background         |
+| Surface          | `bg-so-surface`   | `#111613`                     | Cards, sections         |
+| Surface 2        | `bg-so-surface2`  | `#171D19`                     | Elevated cards, inputs  |
+| Primary Accent   | `text-so-accent`  | `#9AF06A`                     | CTAs, highlights, icons |
+| Secondary Accent | `text-so-accent2` | `#D9F7C0`                     | Hover states            |
+| Text             | `text-so-text`    | `#F5F7F2`                     | Headings, body text     |
+| Muted            | `text-so-muted`   | `#9CA69D`                     | Secondary text, labels  |
+| Borders          | —                 | `rgba(255,255,255,0.06–0.14)` | Card borders            |
 
 The near-black base keeps the focus on the content. The green accent (`#9AF06A`) has enough contrast to stand out on dark backgrounds while still feeling natural for a café — not like a tech startup.
 
@@ -471,12 +485,12 @@ Inline icons at `w-4 h-4` for text-level use, `w-5 h-5` inside icon containers.
 
 ### Button Styles
 
-| Variant | Look | When to Use |
-| --- | --- | --- |
-| `primary` | Green fill, dark text | Main CTAs |
-| `secondary` | Dark surface, subtle border | Secondary actions |
-| `ghost` | Transparent, muted text | Low-priority links |
-| `outline` | Green border, fills on hover | Alternative CTAs |
+| Variant     | Look                         | When to Use        |
+| ----------- | ---------------------------- | ------------------ |
+| `primary`   | Green fill, dark text        | Main CTAs          |
+| `secondary` | Dark surface, subtle border  | Secondary actions  |
+| `ghost`     | Transparent, muted text      | Low-priority links |
+| `outline`   | Green border, fills on hover | Alternative CTAs   |
 
 All variants share `rounded-xl`, `font-semibold`, `text-sm`, and `transition-colors duration-200`.
 
@@ -575,47 +589,59 @@ week05-product-landing-page/
 
 ## 9. Screenshots
 
-| # | File | Description | Viewport |
-| --- | --- | --- | --- |
-| 01 | `01-before-design.png` | Initial prototype before redesign | 1440px |
-| 02 | `02-after-design.png` | Final polished interface | 1440px |
-| 03 | `03-desktop-layout.png` | Full desktop view | 1440 × 900px |
-| 04 | `04-tablet-layout.png` | Tablet view | 768 × 1024px |
-| 05 | `05-mobile-layout.png` | Mobile view | 390 × 844px |
-| 06 | `06-navigation-bar.png` | Navbar — desktop and mobile states | 1440px + 390px |
-| 07 | `07-hero-section.png` | Hero with café card | 1440px |
-| 08 | `08-features-section.png` | Features — large block + 2×2 grid | 1440px |
-| 09 | `09-pricing-cards.png` | Menu section with real drink data | 1440px |
-| 10 | `10-testimonials.png` | Staggered testimonial cards | 1440px |
-| 11 | `11-footer.png` | 4-column footer | 1440px |
-| 12 | `12-vscode-project-structure.png` | VS Code Explorer — full project tree | — |
-| 13 | `13-blade-components-folder.png` | All 11 component files in VS Code | — |
-| 14 | `14-github-repository.png` | GitHub repository page | — |
+### Device Layouts
 
-To take screenshots:
+**Desktop View (1440 × 900px)**
+![Full desktop view](desktop.jpg)
 
-1. Run `php artisan serve` and open `http://localhost:8000`
-2. Open Chrome DevTools with `F12`
-3. Toggle the device toolbar with `Ctrl+Shift+M`
-4. Set the viewport to the size in the table above
-5. Screenshot with the browser's built-in capture tool
+**Tablet View (768 × 1024px)**
+![Tablet view](tablet.jpg)
+
+**Mobile View (390 × 844px)**
+![Mobile view](mobile.png)
+
+---
+
+### Page Sections
+
+**Features**
+![Features — large block + 2x2 grid](features.png)
+
+**Menu & Pricing**
+![Menu section with real drink data](menu.png)
+
+**Testimonials**
+![Staggered testimonial cards](testimonials.png)
+
+**Footer**
+![4-column footer](footer.png)
+
+---
+
+### Project Files & Version Control
+
+**VS Code Project Structure**
+![VS Code Explorer — full project tree](folder_structure.jpg)
+
+**GitHub Repository**
+![GitHub repository page](repo.png)
 
 ---
 
 ## 10. Technologies Used
 
-| Technology | Version | Purpose |
-| --- | --- | --- |
-| Laravel | 12.x | PHP framework, routing, Blade templating |
-| PHP | 8.2+ | Server-side language |
-| Blade | built-in | Templating engine and component system |
-| Tailwind CSS | v4.3.x | Utility-first CSS framework |
-| Vite | v8.x | Asset bundler |
-| @tailwindcss/vite | v4.3.x | Tailwind v4 Vite plugin |
-| Instrument Sans | via Bunny | Font loaded through Vite |
-| Vanilla JavaScript | — | Mobile menu toggle, no libraries |
-| Git | — | Version control |
-| GitHub | — | Remote repository |
+| Technology         | Version   | Purpose                                  |
+| ------------------ | --------- | ---------------------------------------- |
+| Laravel            | 12.x      | PHP framework, routing, Blade templating |
+| PHP                | 8.2+      | Server-side language                     |
+| Blade              | built-in  | Templating engine and component system   |
+| Tailwind CSS       | v4.3.x    | Utility-first CSS framework              |
+| Vite               | v8.x      | Asset bundler                            |
+| @tailwindcss/vite  | v4.3.x    | Tailwind v4 Vite plugin                  |
+| Instrument Sans    | via Bunny | Font loaded through Vite                 |
+| Vanilla JavaScript | —         | Mobile menu toggle, no libraries         |
+| Git                | —         | Version control                          |
+| GitHub             | —         | Remote repository                        |
 
 ---
 
@@ -624,7 +650,7 @@ To take screenshots:
 **Requirements:** PHP 8.2+, Composer, Node.js 18+, npm
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/week05-product-landing-page.git
+git clone https://github.com/ejrdeleon/week05-product-landing-page.git
 cd week05-product-landing-page
 composer install
 npm install
@@ -649,24 +675,22 @@ Open `http://localhost:8000`.
 
 ## 12. Credits & References
 
-| Resource | URL |
-| --- | --- |
-| Official Sideout Cafe Website | [sideout-cafe.com](https://www.sideout-cafe.com/) |
-| Sideout Cafe on Google Maps | [maps.app.goo.gl/cUTeXGX83iXzW5D18](https://maps.app.goo.gl/cUTeXGX83iXzW5D18) |
-| Laravel Documentation | [laravel.com/docs](https://laravel.com/docs) |
-| Tailwind CSS Documentation | [tailwindcss.com/docs](https://tailwindcss.com/docs) |
-| Lucide Icons | [lucide.dev](https://lucide.dev) |
-| Instrument Sans | [fonts.bunny.net](https://fonts.bunny.net) |
+| Resource                      | URL                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------ |
+| Official Sideout Cafe Website | [sideout-cafe.com](https://www.sideout-cafe.com/)                              |
+| Sideout Cafe on Google Maps   | [maps.app.goo.gl/cUTeXGX83iXzW5D18](https://maps.app.goo.gl/cUTeXGX83iXzW5D18) |
+| Laravel Documentation         | [laravel.com/docs](https://laravel.com/docs)                                   |
+| Tailwind CSS Documentation    | [tailwindcss.com/docs](https://tailwindcss.com/docs)                           |
+| Lucide Icons                  | [lucide.dev](https://lucide.dev)                                               |
+| Instrument Sans               | [fonts.bunny.net](https://fonts.bunny.net)                                     |
 
 ---
 
 ## GitHub Repository
 
 ```
-https://github.com/YOUR_USERNAME/week05-product-landing-page
+https://github.com/ejrdeleon/week05-product-landing-page
 ```
-
-Replace `YOUR_USERNAME` with your actual GitHub username before submitting.
 
 ---
 
